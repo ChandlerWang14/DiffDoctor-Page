@@ -67,7 +67,7 @@
           </h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=nKr8TJwAAAAJ&hl=en">Yiyang Wang</a><sup>1</sup></a>&nbsp</a>&nbsp  
+              <a href="https://chandlerwang14.github.io">Yiyang Wang</a><sup>1</sup></a>&nbsp</a>&nbsp  
             </span>
             <span class="author-block">
               <a href="https://xavierchen34.github.io/">Xi Chen</a><sup>1</sup></a>&nbsp</a>&nbsp  
@@ -76,7 +76,7 @@
               <a href="https://xuxiaogang.com">Xiaogang Xu</a><sup>4</sup></a>&nbsp</a>&nbsp    
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?hl=zh-CN&user=a6GxOZgAAAAJ">Sihui Ji</a><sup>1</sup></a>&nbsp</a>&nbsp    
+              <a href="https://sihuiji.github.io">Sihui Ji</a><sup>1</sup></a>&nbsp</a>&nbsp    
             </span>
           </div>
 
@@ -132,7 +132,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://ateb14.github.io/DiffDoctor-Page/"
+                <a href="https://chandlerwang14.github.io/DiffDoctor-Page/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -258,9 +258,10 @@
         <div class="content has-text-justified">
           <p>
             In spite of the recent progress, image diffusion models
-            still produce artifacts. A common solution is to refine
-            an established model with a quality assessment system,
-            which generally rates an image in its entirety. In this
+            still produce artifacts. A common solution is to leverage the 
+            feedback provided by quality assessment systems or human annotators 
+            to optimize the model, where images are generally rated in their entirety. 
+            In this
             work, we believe problem-solving starts with identification,
             yielding the request that the model should be aware of not
             just the presence of defects in an image, but their specific
@@ -271,9 +272,9 @@
             collect a dataset of over 1M flawed synthesized images and
             set up an efficient human-in-the-loop annotation process,
             incorporating a carefully designed class-balance strategy.
-            The learned artifact detector is then involved in the second
-            stage to tune the diffusion model through assigning a
-            per-pixel confidence map for each synthesis. Extensive
+            The learned artifact detector is then involved in the second 
+            stage to optimize the diffusion model by providing pixel-level feedback. 
+            Extensive
             experiments on text-to-image diffusion models demonstrate
             the effectiveness of our artifact detector as well as the
             soundness of our diagnose-then-treat design.
@@ -291,14 +292,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3" style="text-align: center;">Overall Pipeline</h2>
         <div class="image-area">
-          <img src="./DIffDoctor/pipe.jpg" alt="Overall Pipeline" width="100%">
+          <img src="./DIffDoctor/pipe.png" alt="Overall Pipeline" width="100%">
         </div>
         <div class="content has-text-justified">
           <p>
-            Pipeline of DiffDoctor. The first part shows the training of an artifact detector – the doctor. Starting with the initial dataset,
-            the artifact detector is trained in a humans-in-a-loop manner. The second part shows our diagnose-then-treat design, where the patient – a
-            trainable diffusion model, is prompted to synthesize images. Then the frozen artifact detector diagnoses its result by predicting the artifact
-            maps, on which it treats the patient by minimizing the per-pixel artifact confidence to back-propagate to the diffusion model.
+            Pipeline of DiffDoctor. The first part shows the training of an artifact detector -- the doctor. Starting with the initial dataset, the artifact detector is trained in a humans-in-a-loop manner.
+    The second part shows our diagnose-then-treat design, where the patient -- a trainable diffusion model, is prompted to synthesize images. Then the frozen artifact detector diagnoses its result by predicting the artifact maps, on which it treats the patient by minimizing the per-pixel artifact confidence to back-propagate to the diffusion model.
           </p>
         </div>
 
@@ -316,7 +315,7 @@
       @article{wang2025diffdoctor,
         title={DiffDoctor: Diagnosing Image Diffusion Models Before Treating},
         author={Wang, Yiyang and Chen, Xi and Xu, Xiaogang and Ji, Sihui and Liu, Yu and Shen, Yujun and Zhao, Hengshuang},
-        journal={arXiv:2501.12382},
+        journal={ICCV},
         year={2025}
       }
   </code></pre>
@@ -331,7 +330,7 @@
          href="https://arxiv.org/abs/2501.12382">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://ateb14.github.io/DiffDoctor-Page/" class="external-link" disabled>
+      <a class="icon-link" href="https://chandlerwang14.github.io/DiffDoctor-Page/" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
